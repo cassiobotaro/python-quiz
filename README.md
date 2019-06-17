@@ -50,3 +50,32 @@ A resposta é "1", pois em python não existe o operador unário "++". Essa expr
 
 </details>
 
+## 3 - O que o código abaixo irá reproduzir
+
+```python
+x = None
+try:
+    print(int(x))
+except ValueError, TypeError:
+    print("Bad value")
+```
+
+- [ ] 0
+
+- [ ] raises SyntaxError
+
+- [ ] raises TypeError
+
+- [ ] Bad value
+
+<details>
+ <summary>Resposta e Explicação</summary>
+
+É uma pegadinha esta questão e a resposta correta é "raises Syntaxerror".
+
+Na versão 3 do python quando queremos lidar com duas exceções que podem ocorrer, devemos utilizar uma tupla de expressões, então o código anterior deveria ser "except (ValueError, TypeError)".
+
+Uma curiosidade é que caso o erro sintático seja corrigido, teremos o lançamento de TypeError, pois None não pode ser convertido em inteiro.
+
+</details>
+
