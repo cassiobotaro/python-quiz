@@ -79,3 +79,31 @@ Uma curiosidade é que caso o erro sintático seja corrigido, teremos o lançame
 
 </details>
 
+## 4 - O que o código abaixo irá reproduzir
+
+```python
+print(int(sum({
+    1: 1,
+    2: 2,
+    1.0: 3,
+})))
+```
+
+- [ ] 3
+
+- [ ] 4
+
+- [ ] 5
+
+- [ ] 6
+
+- [ ] raises ValueError
+
+<details>
+ <summary>Resposta e Explicação</summary>
+Mais uma pegadinha. O método sum quando aplicado sobre um dicionário itera sobre suas chaves.
+
+Porém nesta questão temo as chaves "1" e "1.0" que produzem o mesmo hash, logo o dicionário final produzido é "{1: 3, 2: 2}".
+
+Logo a resposta correta é "3".
+</details>
