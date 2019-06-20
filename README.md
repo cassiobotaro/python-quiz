@@ -171,3 +171,34 @@ d = [2, 1, 0]
 
 Então a resposta correta é "4 4 4 0".
 </details>
+
+## 6 - O que o código abaixo irá reproduzir
+
+```python
+class Foo(type):
+    def ping(self):
+        print("pong")
+
+class Bar(metaclass=Foo):
+    def pong(self):
+        print("ping")
+
+Bar().ping()
+```
+
+- [ ] pong
+
+- [ ] raises SyntaxError
+
+- [ ] raises AttributeError
+
+- [ ] ping
+
+<details>
+ <summary>Resposta e Explicação</summary>
+ A resposta correta é "raises AttributeError", isto porque Foo é metaclasse de Bar, não superclasse.
+
+ Portanto não ocorre herança de seus métodos e atributos.
+
+ Como é um tópico avançado sobre metaprogramação, recomendo assistir o [vídeo](https://youtu.be/JQBR8fUcd88) do canal Ignorância Zero que é bem didático sobre o assunto e em pt-br.
+</details>
