@@ -244,3 +244,30 @@ Já Foo não implementa esse método, o operador de adição não funciona para 
 
 Uma curiosidade é que como Foo implementa "__int__", tenho a capacidade de fazer a conversão do objeto para inteiro, exemplo "int(Foo())" retornará "1".
 </details>
+
+## 8 - O que o código abaixo irá reproduzir
+
+```python
+x = "máma"
+x[0], x[2] = ["t"] * 2
+print(x)
+```
+
+- [ ] raises SyntaxError
+
+- [ ] raises TypeError
+
+- [ ] táta
+
+- [ ] máma
+
+<details>
+ <summary>Resposta e Explicação</summary>
+
+A resposta correta é "raises TypeError".
+
+A variável x é do tipo str e é imutável, sendo assim uma exceção é lançada quando tentamos modificar o seu conteúdo.
+
+Para realizar a aleração de uma string, devemos utilizar o método "replace".
+
+</details>
