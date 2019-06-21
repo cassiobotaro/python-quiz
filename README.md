@@ -268,6 +268,6 @@ A resposta correta é "raises TypeError".
 
 A variável x é do tipo str e é imutável, sendo assim uma exceção é lançada quando tentamos modificar o seu conteúdo.
 
-Para realizar a aleração de uma string, devemos utilizar o método "replace".
+Para realizar a alteração de uma string, devemos utilizar o método "replace" que irá criar uma nova string alterada.
 
 </details>
