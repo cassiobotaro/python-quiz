@@ -236,13 +236,15 @@ except Exception:
 
 <details>
  <summary>Resposta e Explicação</summary>
+ 
 A resposta correta é "5".
 
-A instância de Bar implementa o método "__add__", somando x(2) ao valor do lado esquerdo do operador "+".
+A instância de Bar implementa o método "\_\_add__", somando x(2) ao valor do lado esquerdo do operador "+".
 
 Já Foo não implementa esse método, o operador de adição não funciona para esta classe.
 
-Uma curiosidade é que como Foo implementa "__int__", tenho a capacidade de fazer a conversão do objeto para inteiro, exemplo "int(Foo())" retornará "1".
+Uma curiosidade é que como Foo implementa "\_\_int__", tenho a capacidade de fazer a conversão do objeto para inteiro, exemplo "int(Foo())" retornará "1".
+
 </details>
 
 ## 8 - O que o código abaixo irá reproduzir
