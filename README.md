@@ -271,3 +271,40 @@ A variável x é do tipo str e é imutável, sendo assim uma exceção é lança
 Para realizar a alteração de uma string, devemos utilizar o método "replace" que irá criar uma nova string alterada.
 
 </details>
+
+## 9 - O que o código abaixo irá reproduzir
+
+```python
+
+def fn(x, y=list()):
+    y.append(x)
+    return sum(y)
+print(fn(1), fn(2, y=[]), fn(3))
+```
+
+- [ ] 1 2 3
+
+- [ ] 1 3 6
+
+- [ ] 1 2 4
+
+- [ ] raises SyntaxError
+
+<details>
+ <summary>Resposta e Explicação</summary>
+
+A resposta correta é "1, 2, 4".
+
+As primeiras chamadas parecem óbvias, quando chamamos "fn(1)", como y é uma lista vazia, adicionamos 1 e calculamos a soma, o resultado esperado é 1.
+
+Na segunda chamada, como y é uma lista vazia passada como parâmetro e adicionamos 2, o resultado é 2.
+
+A terceira chamada que não é óbvia, pois esperávamos que como y foi omitido, uma nova lista vazia fosse criada.
+
+Porém o que acontece é que a função guarda o valor default de y, e como a função "append" modifica a lista "in-place", esse valor é mantido entre as chamadas das funções.
+
+Caso queira ver isto, chame "fn.\_\_defaults__".
+
+Lembrando que o valor default da função só é utilizado caso o parâmetro seja omitido.
+
+</details>
